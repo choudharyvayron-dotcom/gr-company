@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>State & City Required</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Lock Screen */
+#locationPopup {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgb(13,59,102);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background: rgb(244,211,94);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div id="locationPopup">
+    <div class="popup-box">
+        <h2>Select Your Location 🇮🇳</h2>
+
+        <!-- State Dropdown -->
+        <select id="stateSelect" onchange="updateCities()">
+            <option value="">-- Select State --</option>
+            <option value="UP">Uttar Pradesh</option>
+            <option value="MH">Maharashtra</option>
+            <option value="RJ">Rajasthan</option>
+            <option value="MP">Madhya Pradesh</option>
+            <option value="DL">Delhi</option>
+            <option value="BR">Bihar</option>
+        </select>
+
+        <!-- City Dropdown -->
+        <select id="citySelect">
+            <option value="">-- Select City --</option>
+        </select>
+
+        <!-- Correct Button -->
+        <button onclick="unlockPage()">Submit</button>
+    </div>
+</div>
+
+<script>
+
+var cities = {
+    UP: ["Lucknow","Kanpur","Varanasi","Agra","Noida"],
+    MH: ["Mumbai","Pune","Nagpur","Nashik"],
+    RJ: ["Jaipur","Udaipur","Jodhpur"],
+    MP: ["Bhopal","Indore","Gwalior"],
+    DL: ["New Delhi"],
+    BR: ["Patna","Gaya"]
+};
+
+function updateCities() {
+    var state = document.getElementById("stateSelect").value;
+    var cityDropdown = document.getElementById("citySelect");
+
+    cityDropdown.innerHTML = '<option value="">-- Select City --</option>';
+
+    if(state && cities[state]) {
+        cities[state].forEach(function(city) {
+            var option = document.createElement("option");
+            option.text = city;
+            option.value = city;
+            cityDropdown.add(option);
+        });
+    }
+}
+
+function unlockPage() {
+    var state = document.getElementById("stateSelect").value;
+    var city = document.getElementById("citySelect").value;
+
+    if(state === "" || city === "") {
+        alert("State and City both are required!");
+    } else {
+        // Redirect to home page
+        window.location.href = "home.html";
+    }
+}
+
+</script>
+
+</body>
+</html>

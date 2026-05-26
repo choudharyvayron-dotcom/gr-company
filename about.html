@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Us - GR Construction</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+        }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: #111;
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ffc107;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffc107;
+        }
+
+        /* ===== SECTION ===== */
+        section {
+            padding: 70px 8%;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 34px;
+        }
+
+        .highlight {
+            color: #ffc107;
+            font-weight: bold;
+        }
+
+        /* ===== COMPANY SECTION ===== */
+        .company-box {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        /* ===== OWNER SECTION ===== */
+        .owner-section {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .owner-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .owner-image img {
+            width: 320px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .owner-content {
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .owner-content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 40px 8%;
+        }
+
+        .footer h3 {
+            color: #ffc107;
+        }
+
+        @media(max-width:768px){
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .owner-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <div class="navbar">
+        <div class="logo">GR Construction</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="project.html">Projects</a>
+            <a href="services.html">Services</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </div>
+
+    <!-- COMPANY SECTION -->
+    <section>
+        <h1>About GR Construction</h1>
+
+        <div class="company-box">
+            <p>
+                GR Construction is a <strong>trusted and fast-growing construction company</strong> 
+                delivering high-quality building solutions and premium construction materials 
+                for over <span class="highlight">10+ successful years</span>.
+            </p>
+
+            <p>
+                We specialize in supplying <strong>bricks, cement, ceiling materials, concrete blocks, 
+                and industrial construction chemicals</strong> while maintaining strict quality standards.
+            </p>
+
+            <p>
+                Our mission is simple — <strong>Build Strong. Build Smart. Build with Trust.</strong>  
+                Every project reflects our commitment to durability, precision, and customer satisfaction.
+            </p>
+        </div>
+    </section>
+
+    <!-- OWNER SECTION -->
+    <section style="background:white;">
+        <div class="owner-section">
+
+            <div class="owner-image">
+                <!-- Replace image with real Lakshay photo -->
+                <img src="https://images.unsplash.com/photo-1603415526960-f7e0328e4f5c" alt="Lakshay Choudhary">
+            </div>
+
+            <div class="owner-content">
+                <h2>Lakshay Choudhary</h2>
+
+                <p>
+                    <span class="highlight">Lakshay Choudhary</span> is a 
+                    <strong>vision-driven entrepreneur, strategic thinker, 
+                    and construction industry expert</strong> with over 
+                    <strong>10+ years of hands-on experience</strong>.
+                </p>
+
+                <p>
+                    Known for his <strong>strong leadership, disciplined execution, 
+                    and uncompromising quality standards</strong>, he has successfully 
+                    handled major construction and material supply projects.
+                </p>
+
+                <p>
+                    His personality reflects <strong>confidence, technical mastery, 
+                    professionalism, and customer-first values</strong>.  
+                    Under his leadership, every project becomes a benchmark of 
+                    <strong>strength, reliability, and excellence</strong>.
+                </p>
+
+                <p>
+                    With a forward-thinking mindset focused on 
+                    <strong>innovation, long-term growth, and trust-building</strong>, 
+                    Lakshay Choudhary continues to elevate GR Construction 
+                    as a respected name in the construction industry.
+                </p>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <h3>GR Construction</h3>
+        <p>Building Strength, Trust & Quality Since 2015</p>
+        <p>© 2026 GR Construction. All Rights Reserved.</p>
+    </div>
+
+</body>
+</html>
